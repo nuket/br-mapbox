@@ -1,0 +1,15 @@
+config BR2_PACKAGE_EARCUTHPP
+	bool "earcuthpp"
+	default y
+	help
+	  C++ earcut.hpp Header
+
+	  A C++ port of earcut.js, a fast, header-only polygon triangulation library.
+
+	  The library implements a modified ear slicing algorithm, optimized by z-order 
+          curve hashing and extended to handle holes, twisted polygons, degeneracies 
+          and self-intersections in a way that doesn't guarantee correctness of 
+          triangulation, but attempts to always produce acceptable results for practical 
+          data like geographical shapes.
+
+	  https://github.com/mapbox/earcut.hpp
