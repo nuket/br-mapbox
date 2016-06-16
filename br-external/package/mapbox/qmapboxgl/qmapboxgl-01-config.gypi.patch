@@ -11,7 +11,7 @@ new file mode 100644
 index 0000000..cd4b6cc
 --- /dev/null
 +++ b/config.gypi
-@@ -0,0 +1,36 @@
+@@ -0,0 +1,42 @@
 +{
 +  'target_defaults': {
 +    'cflags%': [],
@@ -24,6 +24,9 @@ index 0000000..cd4b6cc
 +  'variables': {
 +    'qt_version_major%': ['5'],
 +    'boost_cflags%': [],
++    'earcut_cflags%': [],
++    'earcut_ldflags%': [],
++    'earcut_static_libs%': [],
 +    'geojsonvt_cflags%': [],
 +    'geojsonvt_ldflags%': [],
 +    'geometry_cflags%': [],
@@ -42,6 +45,9 @@ index 0000000..cd4b6cc
 +    'rapidjson_ldflags%': [],
 +    'rapidjson_static_libs%': [],
 +    'sqlite_static_libs%': [],
++    'unique_resource_cflags%': [],
++    'unique_resource_ldflags%': [],
++    'unique_resource_static_libs%': [],
 +    'variant_cflags%': [],
 +    'variant_ldflags%': [],
 +    'variant_static_libs%': [],

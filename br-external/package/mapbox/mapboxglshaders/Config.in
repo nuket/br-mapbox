@@ -1,0 +1,7 @@
+config BR2_PACKAGE_MAPBOXGLSHADERS
+	bool "mapboxglshaders"
+	default y
+	help
+	  This repository contains GL shaders which are shared by Mapbox GL JS and Mapbox GL Native.
+
+	  https://github.com/mapbox/mapbox-gl-shaders

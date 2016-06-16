@@ -11,6 +11,7 @@ QMAPBOXGL_DEPENDENCIES += boost
 QMAPBOXGL_DEPENDENCIES += qt5base
 QMAPBOXGL_DEPENDENCIES += earcuthpp
 QMAPBOXGL_DEPENDENCIES += geometryhpp
+QMAPBOXGL_DEPENDENCIES += uniqueresourcehpp
 QMAPBOXGL_DEPENDENCIES += nunicode
 QMAPBOXGL_DEPENDENCIES += rapidjson
 QMAPBOXGL_DEPENDENCIES += variant
@@ -18,6 +19,7 @@ QMAPBOXGL_DEPENDENCIES += geojsonvt
 QMAPBOXGL_DEPENDENCIES += protozero
 QMAPBOXGL_DEPENDENCIES += gtest
 QMAPBOXGL_DEPENDENCIES += openssl
+QMAPBOXGL_DEPENDENCIES += mapboxglshaders
 
 #QMAPBOXGL_DEPENDENCIES += qttools-native
 QMAPBOXGL_DEPENDENCIES += qt5location
@@ -41,6 +43,10 @@ pkg-conf-cflags = $(call QMAPBOXGL_PKGCONF,--cflags,$1)
 pkg-conf-libs   = $(call QMAPBOXGL_PKGCONF,--libs  ,$1)
 
 define QMAPBOXGL_CONFIGURE_CMDS
+	# Pull in all the GLSL shaders.
+	$(INSTALL) -d $(@D)/node_modules/mapbox-gl-shaders
+	cp -R $(@D)/../mapboxglshaders-master/src/* $(@D)/node_modules/mapbox-gl-shaders
+
 	(cd $(@D); \
 		$(TARGET_CONFIGURE_OPTS) \
 		$(TARGET_CONFIGURE_ARGS) \

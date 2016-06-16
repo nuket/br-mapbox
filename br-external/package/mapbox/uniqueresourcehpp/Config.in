@@ -1,0 +1,7 @@
+config BR2_PACKAGE_UNIQUERESOURCEHPP
+	bool "uniqueresourcehpp"
+	default y
+	help
+	  C++ unique_resource.hpp Header
+
+	  https://github.com/okdshin/unique_resource

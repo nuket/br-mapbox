@@ -4,4 +4,6 @@ include $(BR2_EXTERNAL)/package/mapbox/nunicode/nunicode.mk
 include $(BR2_EXTERNAL)/package/mapbox/variant/variant.mk
 include $(BR2_EXTERNAL)/package/mapbox/protozero/protozero.mk
 include $(BR2_EXTERNAL)/package/mapbox/geojsonvt/geojsonvt.mk
+include $(BR2_EXTERNAL)/package/mapbox/uniqueresourcehpp/uniqueresourcehpp.mk
+include $(BR2_EXTERNAL)/package/mapbox/mapboxglshaders/mapboxglshaders.mk
 include $(BR2_EXTERNAL)/package/mapbox/qmapboxgl/qmapboxgl.mk
