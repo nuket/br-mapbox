@@ -47,6 +47,9 @@ define QMAPBOXGL_CONFIGURE_CMDS
 	$(INSTALL) -d $(@D)/node_modules/mapbox-gl-shaders
 	cp -R $(@D)/../mapboxglshaders-master/src/* $(@D)/node_modules/mapbox-gl-shaders
 
+	# Pull in all the headers that were pushed to sysroot.
+	cp -R $(STAGING_DIR)/usr/include/mapbox/* $(@D)/include
+
 	(cd $(@D); \
 		$(TARGET_CONFIGURE_OPTS) \
 		$(TARGET_CONFIGURE_ARGS) \
